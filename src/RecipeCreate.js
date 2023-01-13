@@ -15,7 +15,7 @@ function RecipeCreate({ saveRecipe }) {
   const submitHandler=(event)=> {
     event.preventDefault();
     saveRecipe(formData);
-    setForm({initialFormState});
+    setForm(initialFormState);
   }
 
   const changeHandler= ({target}) => {
@@ -34,6 +34,7 @@ function RecipeCreate({ saveRecipe }) {
                 name="name"
                 type="text"
                 placeholder="Name"
+                required={true}
                 onChange={changeHandler}
                 value={formData.name}
               />
@@ -44,6 +45,7 @@ function RecipeCreate({ saveRecipe }) {
                 id="cuisine"
                 name="cuisine"
                 type="text"
+                required={true}
                 placeholder="Cuisine"
                 onChange={changeHandler}
                 value={formData.cuisine}
@@ -55,6 +57,7 @@ function RecipeCreate({ saveRecipe }) {
                 id="photo"
                 name="photo"
                 type="url"
+                required={true}
                 placeholder="Photo"
                 onChange={changeHandler}
                 value={formData.photo}
@@ -65,6 +68,7 @@ function RecipeCreate({ saveRecipe }) {
               <textarea style={{width:"99%"}}
                 id="ingredients"
                 name="ingredients"
+                required={true}
                 placeholder="Ingredients"
                 onChange={changeHandler}
                 value={formData.ingredients}
@@ -75,6 +79,7 @@ function RecipeCreate({ saveRecipe }) {
               <textarea style={{width:"99%"}}
                 id="preparation"
                 name="preparation"
+                required={true}
                 placeholder="Preparation"
                 onChange={changeHandler}
                 value={formData.preparation}
