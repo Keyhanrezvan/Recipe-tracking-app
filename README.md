@@ -5,5 +5,6 @@ The app will allow a user to add new recipes, display a list of recipes and dele
 
 ## Home View
 ![app view](./RecipeApp.png)
-##Technology
+
+## Technology used
 React, CSS, Bootstrap
